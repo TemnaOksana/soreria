@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SOTERIA</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+        <style>
+@import url(https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap);
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 42px;
+  font-family: Manrope,sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: 'Didact Gothic',sans-serif;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.4em;
+  line-height: 42px;
+  font-family: Verdana,Geneva,Tahoma,sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.5em;
+  animation-duration: 20s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {margin-left: 100%; width: 300%;}
+  to {margin-left: 0; width: 100%;}
+}
+
+#header {
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 0 solid #000;
+  background-color: #fbf7e9;
+  z-index: 1000;
+}
+
+#logo {
+  float: left;
+  width: 130px;
+  padding-top: 8px;
+  padding-right: 9px;
+  z-index: 1000;
+}
+
+.photo2 {
+  line-height: 100px;
+  padding: 15px;
+}
+
+#navigation {
+  display: block;
+  text-align: center;
+  z-index: 1000;
+}
+
+#mainnav { font-size: 0;
+  z-index: 1000;}
+
+#mainnav li {
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 1.5em;
+  margin-right: 20px;
+  font-family: Raleway,sans-serif;
+  font-weight: 900;
+  z-index: 1000;
+}
+
+#mainnav li:last-child {margin-right: 0;z-index: 1000;}
+
+#mainnav li a {
+  text-decoration: none;
+  color: #532d17;
+  z-index: 1000;
+}
+
+#mainnav li a:hover {color: #b4eef7;z-index: 1000;}
+
+.double-space {height: 150px;}
+.section {min-height: 700px; overflow: hidden;}
+.darker {background-color: #fbf7e9;}
+.lighter {background-color: #fff;}
+#Services { background: url(tort.png) 50% 0 repeat fixed;}
+
+.centered-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1250px;
+  overflow: hidden;
+}
+
+.section.lighter h1 {color: #333;}
+.section.lighter h2 {color: #555;}
+
+.menu-icon {
+  display: none;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/menu-24-32.png) left top no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -ms-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  right: 0;
+  top: 40px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media only screen and (max-width:319px) {
+  .centered-wrapper {width: 94%!important;}
+
+  #navigation {
+    display: none;
+    width: 100%;
+    top: 81px;
+    background: #e9e9e9;
+    position: absolute;
+    z-index: 9999;
+    margin-left: -3%;
+    text-align: left;
+    z-index: 1000;
+  }
+
+  #mainnav {padding: 0; margin: 0;z-index: 1000;}
+
+  #mainnav li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 0!important;
+    margin: 0;
+    z-index: 1000;
+  }
+
+  #mainnav li:last-child {border-bottom: 0;z-index: 1000;}
+
+  #mainnav li a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    margin: 0!important;
+    z-index: 1000;
+  }
+
+  #mainnav li a:hover {
+    background-color: #555;
+    color: #fff;
+    z-index: 1000;
+  }
+
+  .menu-icon {
+    display: block!important;
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width:320px) and (max-width:479px) {
+  .centered-wrapper {width: 94%!important;}
+
+  #navigation {
+    display: none;
+    width: 100%;
+    top: 81px;
+    background: #e9e9e9;
+    position: absolute;
+    z-index: 9999;
+    margin-left: -3%;
+    text-align: left;
+    z-index: 1000;
+  }
+
+  #mainnav {padding: 0; margin: 0;z-index: 1000;}
+
+  #mainnav li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 0!important;
+    margin: 0;
+    z-index: 1000;
+  }
+
+  #mainnav li:last-child {border-bottom: 0;z-index: 1000;}
+
+  #mainnav li a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    margin: 0!important;
+    z-index: 1000;
+  }
+
+  #mainnav li a:hover {
+    background-color: #555;
+    color: #fff;z-index: 1000;}
+
+  .menu-icon {
+    display: block!important;
+    right: 20px;z-index: 1000;}
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+  .centered-wrapper {width: 96%!important;}
+
+  #navigation {
+    display: none;
+    width: 100%;
+    top: 81px;
+    background: #e9e9e9;
+    position: absolute;
+    z-index: 9999;
+    margin-left: -2%;
+    text-align: left;
+    z-index: 1000;
+  }
+
+  #mainnav {padding: 0; margin: 0;z-index: 1000;}
+
+  #mainnav li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 0!important;
+    margin: 0;
+    z-index: 1000;
+  }
+
+  #mainnav li:last-child {border-bottom: 0;}
+
+  #mainnav li a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    margin: 0!important;
+    z-index: 1000;
+  }
+
+  #mainnav li a:hover {background-color: #555; color: #fff;}
+  .menu-icon {display: block!important; right: 20px;}
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+  .centered-wrapper {width: 96%!important;}
+}
+
+@media only screen and (min-width:1024px) and (max-width:1279px) {
+  .centered-wrapper {width: 96%!important;}
+}
+
+@media only screen and (min-width:1280px) {
+  .centered-wrapper {
+    width: 1250px!important;
+  }
+}
+
+/* слайдер почався тут*/
+.slider {
+  width: auto;
+  max-width: 100%;
+  position: relative;
+  margin: 1rem auto;
+  overflow: hidden;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+.slide-content {width: 100%; height: 30em; background-image: url(s1.png);}
+.slide-content2 {width: 100%; height: 30em;background-image: url(s2.png);}
+.slide-content3 { width: 100%; height: 30em; background-color: #ACC8E5;}
+
+.slide-content3 img {
+  width: 281px;
+  height: 281px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  height: 25px;
+  padding: 16px;
+  margin-top: -28px;
+  color: #FFB4A8;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  border-radius: 0 4px 4px 0;
+  user-select: none;
+}
+
+.next {right: 0; border-radius: 4px 0 0 4px;}
+.prev:hover,.next:hover {background-color: rgb(253, 235, 154);}
+
+.slide-caption {
+  position: absolute;
+  color: #46240F;
+  font-size: 42px;
+  font-family: 'Didact Gothic';
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 400px;
+  margin-top: 52px;
+  text-align: center;
+  line-height: 1em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+.slide-caption2 {
+  position: absolute;
+  color: #FFB4A8;
+  font-size: 35px;
+  left: 52%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  font-family: 'Yeseva One', cursive;
+  font-style: normal;
+  line-height: 37px;
+  text-align: left;
+}
+
+.slide-caption3 {
+  position: absolute;
+  color: #000000;
+  font-size: 35px;
+  font-family: 'Didact Gothic';
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 60%;
+  margin-top: 52px;
+  text-align: justify;
+  line-height: 1em;
+  margin-left: 15px;
+}
+
+.numbertext {
+  color: #7D0000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 16px;
+  position: absolute;
+  top: 0;
+}
+
+.dots {
+  height: 15px;
+  padding: 0;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #FFB4A8;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.dot:hover { background-color: rgb(253, 235, 154);}
+
+.nast-stor{
+    background-color: #FFB4A8;
+    border: none;
+    color: #1C0000;
+    padding: 5px !important;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    font-size: 0.7em;
+    cursor: pointer;
+    width: 50%;
+    font-family: 'Yeseva One', cursive;
+    border-radius: 18px;
+    margin-left: 55%;
+}
+
+.nast-stor span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.7s;
+}
+.nast-stor span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -25px;
+    transition: 0.7s;
+}
+.nast-stor:hover span {
+    padding-right: 30px;
+}
+.nast-stor:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+/* закінчився тут*/
+
+.projcard-container {margin: 50px 0;}
+.projcard-container, .projcard-container * {box-sizing: border-box;}
+
+.projcard-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.projcard {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-bottom: 40px;
+  border-radius: 3px;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projcard:hover {
+  box-shadow: 0 34px 32px -33px #491e02;
+  transform: translate(0,-3px);
+}
+
+.projcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg,#361703,transparent 50%);
+  opacity: .07;
+}
+
+.projcard:nth-child(2n)::before {background-image: linear-gradient(-250deg,#462001,transparent 50%);}
+
+.projcard-innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.projcard-img {
+  position: absolute;
+  height: 34em;
+  width: 19em;
+  top: 0;
+  left: 0;
+  transition: transform .2s ease;
+}
+
+.projcard:nth-child(2n) .projcard-img {left: initial; right: 0;}
+.projcard:hover .projcard-img {transform: scale(1.05) rotate(1deg);}
+.projcard:hover .projcard-bar { width: 70px;}
+
+.projcard-textbox {
+  position: absolute;
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  font-size: 17px;
+}
+
+.projcard:nth-child(2n) .projcard-textbox {left: initial; right: 430px;}
+.projcard:nth-child(2n) .projcard-textbox::before {display: none;}
+.projcard-textbox::after {display: none;left: initial;right: -55px;}
+.projcard:nth-child(2n) .projcard-textbox::after {display: block;}
+.projcard-textbox * { position: relative;}
+.projcard-title {font-family: Voces,'Open Sans',arial,sans-serif; font-size: 24px;}
+.projcard-subtitle {font-family: Voces,'Open Sans',arial,sans-serif; color: #4e2504;}
+
+.projcard-bar {
+  left: -2px;
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #692f00;
+  transition: width .2s ease;
+}
+
+.projcard-description {
+  z-index: 10;
+  font-size: 25px;
+  color: #422300;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Didact Gothic',sans-serif;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+.text-photo-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.text {
+  flex-basis: 60%;
+  padding: 20px;
+}
+
+.flipped .text { order: 1;}
+
+.photo {
+  height: 350px;
+  overflow: hidden;
+  flex-basis: 40%;
+}
+
+.photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width:500px) {
+  .text-photo-container { flex-direction: column;}
+  .flipped .text {order: 0;}
+  }
+
+.footer {
+  padding: 20px;
+  background-color: #fbf7e9;
+}
+
+h6 {
+  text-align: center;
+  color: #3d2301;
+}
+
+/* -посилання на соц мережі з лівого боку початок- */
+#mySidenav a {
+  position: absolute;
+  left: -100px;
+  transition: 0.5s;
+  padding: 15px;
+  margin-top: 9em;
+  width: 6%;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#tg {
+  top: 20px;
+  background-color: #46240F;
+}
+
+#fc {
+  top: 80px;
+  background-color: #4D2F1D;
+}
+
+#is {
+  top: 140px;
+  background-color: #543B2B;
+}
+
+#ln {
+  top: 200px;
+  background-color: #5C4639;
+}
+/* -посилання на соц мережі з лівого боку кінець- */
+          </style>
+    </head>
+    <body>
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+
+               <header id="header">
+        	
+                <!-- Centered Wrapper: починається -->
+                <div class="centered-wrapper">
+                    
+                    <!-- Menu Icon: починається -->
+                    <div class="menu-icon"></div>
+                    <!-- Menu Icon: ends -->
+                
+                    <!-- Navigation: починається -->
+                    <nav id="navigation">
+                    
+                        <!-- Main Navigation: починається -->
+                        <!-- Замінити href="#Services-->
+                        <ul id="mainnav" class="sf-menu">
+                          <div id="logo">  
+                            <span class="logo"> <img src="logoo.png" width="135px" height="57px"> </span> 
+                            </div>
+                            <li><a href="1exp.html"><span>ПРО ФІРМУ</span></a></li>
+                            <li><a href="assortment.html"><span>ПРОДУКЦІЯ</span></a></li>
+                            <li><a href="delivery.html"><span>ДОСТАВКА</span></a></li>  
+                            <li><a href="shop.html"><span>МАГАЗИНИ</span></a></li>                     
+                            <li><a href="support.html"><span>СЛУЖБА ПІДТРИМКИ</span></a></li>
+                            <li><a href="vacancies.html"><span>ВАКАНСІЇ</span></a></li>
+                            
+                        </ul>
+                        <!-- Main Navigation: кінець -->
+                    
+                    </nav>
+                    <!-- Navigation: кінець -->
+                  
+                </div>
+              <!-- Centered Wrapper: кінець -->
+            </header>  
+
+        <div id="mySidenav" class="sidenav">
+          <a href="#" id="tg">Telegram</a>
+          <a href="#" id="fc">Facebook</a>
+          <a href="#" id="is">Instagram</a>
+          <a href="#" id="ln">LinkedIn</a>
+        </div>
+        
+        <!-- Wrapper: починається -->
+        <div id="wrapper">
+        
+            <!-- Section: починається -->
+            <section id="About" class="section darker">
+        
+                <!-- Double Space: починається -->
+                <div class="double-space"></div>
+                <!-- Double Space: кінець -->
+        
+                <!-- Centered Wrapper: починається -->
+                <div class="centered-wrapper">
+                    
+                    <div class="projcard-container">
+		
+                      <div class="projcard projcard-blue">
+                        <div class="projcard-innerbox">
+                          <img class="projcard-img" src="con1.jpg" />
+                          <div class="projcard-textbox">
+                            <div class="projcard-title"><b style=" color: #5f2503; font-family: 'Zen Loop', cursive; font-size: 65px;">SOTERIA</b></div>
+                            <div class="projcard-subtitle">кондитерська фірма</div>
+                            <div class="projcard-bar"></div>
+                            <div class="projcard-description">
+                              Soteria має вражаючу колекцію десертів, які включають у себе макаронс, тірамісу, фруктові тарті, шоколадні та фруктові бомбоньєри, та інші різноманітні кондитерські вироби. Всі вироби пропонуються у вигляді окремих порцій або в подарункових коробках, що робить їх ідеальним вибором для подарунків або для розкішного десерту після обіду. На сторінці фірми можна побачити чудові фотографії кожного десерту, що допоможе Вам зробити вибір. </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div> 
+                <!-- Centered Wrapper: кінець -->
+                <!-- Double Space: починається -->
+                <div class="double-space"></div>
+                <!-- Double Space: кінець -->
+        
+            </section>
+            <!-- Section: кінець -->
+        
+            <!-- Section: починається -->  
+            <section id="Services" class="section lighter">
+        
+                <!-- Double Space: починається -->
+                <div class="double-space"></div>
+                <!-- Double Space: кінець -->
+        
+        		  <!-- Історія фірми з фото початок -->
+                <div class="centered-wrapper">
+                    <h1 style="color: #ffffff;">Історія фірми</h1><hr><br>
+                 <main>
+                  <section class="text-and-photo">
+                    <div class="text-photo-container">
+                      <div class="text">
+                        <h1 style="color: #ffffff;">1960-1965 (pp).</h1>
+                        <h5 style="color: #ffffff;">Засновник SOTERIA почав виробляти кондитерські вироби в невеликій кухні вдома, продажі відбувалися через місцевий магазин.</h5>
+                      </div>
+                      <div class="photo">
+                        <img src="https://st.depositphotos.com/1163717/4894/i/600/depositphotos_48944465-stock-photo-small-town-main-street.jpg">
+                      </div>
+                    </div>
+                  </section>
+                  <section class="text-and-photo flipped">
+                    <div class="text-photo-container">
+                      <div class="text">
+                        <h1 style="color: #ffffff;">1965-1970 (pp).</h1>
+                        <h5 style="color: #ffffff;">Компанія зареєстрована і переїжджає в нове виробниче приміщення, де починається масштабне виробництво кондитерських виробів, які швидко здобувають популярність серед місцевих жителів.</h5>
+                      </div>
+                      <div class="photo">
+                        <img src="https://st4.depositphotos.com/9900404/28441/i/600/depositphotos_284417094-stock-photo-bakery-production-line-with-sweet.jpg">
+                      </div>
+                    </div>
+                  </section>
+                  <section class="text-and-photo">
+                    <div class="text-photo-container">
+                      <div class="text">
+                        <h1 style="color: #ffffff;">1975-1980 (pp).</h1>
+                        <h5 style="color: #ffffff;">SOTERIA випускає нові види десертів та цукерок, розширюючи асортимент продукції, та залучає нових клієнтів через ефективну рекламу.</h5>
+                      </div>
+                      <div class="photo" >
+                         <img src="sweee.png">
+                      </div>
+                    </div>
+                  </section>
+                  <section class="text-and-photo flipped">
+                    <div class="text-photo-container">
+                      <div class="text">
+                        <h1 style="color: #ffffff;">1985-1990 (pp).</h1>
+                        <h5 style="color: #ffffff;">Компанія збільшує обсяг виробництва та випускає свої продукти на нові ринки, створюючи партнерства з різними магазинами та супермаркетами.</h5>
+                      </div>
+                      <div class="photo">
+                        <img src="https://st4.depositphotos.com/37003820/39287/i/600/depositphotos_392872008-stock-photo-investors-business-team-join-hands.jpg">
+                      </div>
+                    </div>
+                  </section>
+                  <section class="text-and-photo">
+                    <div class="text-photo-container">
+                      <div class="text">
+                        <h1 style="color: #ffffff;">1995-2000 (pp).</h1>
+                        <h5 style="color: #ffffff;">SOTERIA впроваджує нові технології виробництва та зберігання продуктів, зокрема заморожування та вакуумне упакування, що дозволяє продуктам тривалий час зберігати свіжість.</h5>
+                      </div>
+                      <div class="photo">
+                        <img src="https://st3.depositphotos.com/1783385/35218/i/600/depositphotos_352180632-stock-photo-almonds-chocolate-candy-transparent-bag.jpg">
+                      </div>
+                    </div>
+                  </section>
+                  <section class="text-and-photo flipped">
+                    <div class="text-photo-container">
+                      <div class="text">
+                        <h1 style="color: #ffffff;">2005-2010 (pp).</h1>
+                        <h5 style="color: #ffffff; ">Компанія запускає виробництво екзотичних та гурманських видів десертів та напоїв, що забезпечує її популярність не лише на місцевому ринку, але й серед міжнародних покупців.</h5>
+                      </div>
+                      <div class="photo">
+                        <img src="aooo.png">
+                      </div>
+                    </div>
+                  </section>                      <section class="text-and-photo">
+                    <div class="text-photo-container">
+                      <div class="text">
+                        <h1 style="color: #ffffff;">2015-2020 (pp).</h1>
+                        <h5 style="color: #ffffff;">SOTERIA активно впроваджує еко-та соціальні ініціативи у своєму виробництві та сприяє розвитку спільноти, що забезпечує їй позитивну репутацію та лояльних клієнтів.</h5>
+                      </div>
+                      <div class="photo">
+                        <img src="https://media.istockphoto.com/id/1318413447/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%BE%D1%84%D1%96%D1%86%D1%96%D0%B0%D0%BD%D1%82%D0%BA%D0%B0-%D1%8F%D0%BA%D0%B0-%D1%82%D1%80%D0%B8%D0%BC%D0%B0%D1%94-%D1%96-%D0%BF%D0%BE%D0%B4%D0%B0%D1%94-%D0%BA%D0%B0%D0%B2%D1%83-%D1%96-%D1%97%D0%B6%D1%83-%D0%BD%D0%B0-%D0%B2%D0%B8%D0%BD%D0%BE%D1%81-%D0%B2-%D0%BF%D0%B0%D0%BF%D0%B5%D1%80%D0%BE%D0%B2%D0%BE%D0%BC%D1%83-%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D1%96-%D0%B4%D0%BB%D1%8F-%D0%BA%D0%BB%D1%96%D1%94%D0%BD%D1%82%D0%B0-%D0%B2-%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%96.jpg?s=612x612&w=0&k=20&c=uhHumxs2ZiVO6U1WpaVtgJFfjXPpZX22oBB1Q-A2gkY=">
+                      </div>
+                    </div>
+                  </section>
+                  <section class="text-and-photo flipped">
+                    <div class="text-photo-container">
+                      <div class="text">
+                        <h1 style="color: #ffffff;">2020-2023 (pp).</h1>
+                        <h5 style="color: #ffffff; ">У зв'язку з пандемією COVID-19, SOTERIA швидко адаптується до змінених умов та запускає онлайн-магазин для зручності клієнтів, які не можуть відвідати фізичні магазини. Незважаючи на труднощі, SOTERIA продовжує займати лідерські позиції на ринку та розвиватися, впроваджуючи нові ідеї та технології в свої продукти.</h5>
+                      </div>
+                      <div class="photo">
+                        <img src="https://www.sogoodmagazine.com/wp-content/uploads/2020/05/beantobar-olivier.jpg">
+                      </div>
+                    </div>
+                  </section>
+                </main>
+
+                </div>
+                <!-- Centered Wrapper: кінець -->
+                
+                <!-- Double Space: починається -->
+                <div class="double-space"></div>
+                <!-- Double Space: кінець -->
+        
+            </section>
+            <!-- Section: починається -->
+            
+            <!-- Section: починається -->  
+            <section id="sliderrr" class="section darker">
+        
+                <!-- Double Space: починається -->
+                <div class="double-space"></div>
+                <!-- Double Space: кінець -->
+        
+        		  <!-- Centered Wrapper: починається -->
+                <div class="centered-wrapper">
+                    <div class="slider">
+                      <div class="slide">
+                        <div class="slide-content"></div>
+                        <div class="slide-caption">Зовсім скоро на полицях магазинів нові вироби кондитерської компанії SOTERIA:</div>
+                      </div>
+                    
+                      <div class="slide">
+                        <div class="slide-content2"></div>
+                        <div class="slide-caption2">Спробуй завовити онлайн улюбленні солодощі<br><button class="nast-stor"><span>купити</span></button></div>
+                      </div>
+                    
+                      <div class="slide">
+                        <div class="slide-content3"></div>
+                        <div class="slide-caption3"><img src="qr3.png" style="width: 200px; height: 200px; float: left; margin: 0px 25px 0 0;" > Отримуй знижку на всі десерти в фірмових магазинах SOTERIA у твоєму місті</div>
+                      </div>
+                    </div>
+                </div>
+                <!-- Centered Wrapper: кінець -->
+                <div class="double-space"></div>
+            </section>
+            <!-- Section: кінець -->
+              
+        </div>
+        <!-- Wrapper кінець -->        
+        <div class="footer">
+          <h6><hr>Copyright not protected © 2023 SOTERIAStores<br>Робота Темної Оксани</h6>
+        </div>
+        <script>
+
+!function(){function e(){var e=!1;e&&c("keydown",r),v.keyboardSupport&&!e&&u("keydown",r)}function t(){if(document.body){var t=document.body,o=document.documentElement,n=window.innerHeight,r=t.scrollHeight;if(S=document.compatMode.indexOf("CSS")>=0?o:t,w=t,e(),x=!0,top!=self)y=!0;else if(r>n&&(t.offsetHeight<=n||o.offsetHeight<=n)){var a=!1,i=function(){a||o.scrollHeight==document.height||(a=!0,setTimeout(function(){o.style.height=document.height+"px",a=!1},500))};if(o.style.height="auto",setTimeout(i,10),S.offsetHeight<=n){var l=document.createElement("div");l.style.clear="both",t.appendChild(l)}}v.fixedBackground||b||(t.style.backgroundAttachment="scroll",o.style.backgroundAttachment="scroll")}}function o(e,t,o,n){if(n||(n=1e3),d(t,o),1!=v.accelerationMax){var r=+new Date,a=r-C;if(a<v.accelerationDelta){var i=(1+30/a)/2;i>1&&(i=Math.min(i,v.accelerationMax),t*=i,o*=i)}C=+new Date}if(M.push({x:t,y:o,lastX:0>t?.99:-.99,lastY:0>o?.99:-.99,start:+new Date}),!T){var l=e===document.body,u=function(){for(var r=+new Date,a=0,i=0,c=0;c<M.length;c++){var s=M[c],d=r-s.start,f=d>=v.animationTime,h=f?1:d/v.animationTime;v.pulseAlgorithm&&(h=p(h));var m=s.x*h-s.lastX>>0,w=s.y*h-s.lastY>>0;a+=m,i+=w,s.lastX+=m,s.lastY+=w,f&&(M.splice(c,1),c--)}l?window.scrollBy(a,i):(a&&(e.scrollLeft+=a),i&&(e.scrollTop+=i)),t||o||(M=[]),M.length?E(u,e,n/v.frameRate+1):T=!1};E(u,e,0),T=!0}}function n(e){x||t();var n=e.target,r=l(n);if(!r||e.defaultPrevented||s(w,"embed")||s(n,"embed")&&/\.pdf/i.test(n.src))return!0;var a=e.wheelDeltaX||0,i=e.wheelDeltaY||0;return a||i||(i=e.wheelDelta||0),!v.touchpadSupport&&f(i)?!0:(Math.abs(a)>1.2&&(a*=v.stepSize/120),Math.abs(i)>1.2&&(i*=v.stepSize/120),o(r,-a,-i),e.preventDefault(),void 0)}function r(e){var t=e.target,n=e.ctrlKey||e.altKey||e.metaKey||e.shiftKey&&e.keyCode!==H.spacebar;if(/input|textarea|select|embed/i.test(t.nodeName)||t.isContentEditable||e.defaultPrevented||n)return!0;if(s(t,"button")&&e.keyCode===H.spacebar)return!0;var r,a=0,i=0,u=l(w),c=u.clientHeight;switch(u==document.body&&(c=window.innerHeight),e.keyCode){case H.up:i=-v.arrowScroll;break;case H.down:i=v.arrowScroll;break;case H.spacebar:r=e.shiftKey?1:-1,i=-r*c*.9;break;case H.pageup:i=.9*-c;break;case H.pagedown:i=.9*c;break;case H.home:i=-u.scrollTop;break;case H.end:var d=u.scrollHeight-u.scrollTop-c;i=d>0?d+10:0;break;case H.left:a=-v.arrowScroll;break;case H.right:a=v.arrowScroll;break;default:return!0}o(u,a,i),e.preventDefault()}function a(e){w=e.target}function i(e,t){for(var o=e.length;o--;)z[N(e[o])]=t;return t}function l(e){var t=[],o=S.scrollHeight;do{var n=z[N(e)];if(n)return i(t,n);if(t.push(e),o===e.scrollHeight){if(!y||S.clientHeight+10<o)return i(t,document.body)}else if(e.clientHeight+10<e.scrollHeight&&(overflow=getComputedStyle(e,"").getPropertyValue("overflow-y"),"scroll"===overflow||"auto"===overflow))return i(t,e)}while(e=e.parentNode)}function u(e,t,o){window.addEventListener(e,t,o||!1)}function c(e,t,o){window.removeEventListener(e,t,o||!1)}function s(e,t){return(e.nodeName||"").toLowerCase()===t.toLowerCase()}function d(e,t){e=e>0?1:-1,t=t>0?1:-1,(k.x!==e||k.y!==t)&&(k.x=e,k.y=t,M=[],C=0)}function f(e){if(e){e=Math.abs(e),D.push(e),D.shift(),clearTimeout(A);var t=D[0]==D[1]&&D[1]==D[2],o=h(D[0],120)&&h(D[1],120)&&h(D[2],120);return!(t||o)}}function h(e,t){return Math.floor(e/t)==e/t}function m(e){var t,o,n;return e*=v.pulseScale,1>e?t=e-(1-Math.exp(-e)):(o=Math.exp(-1),e-=1,n=1-Math.exp(-e),t=o+n*(1-o)),t*v.pulseNormalize}function p(e){return e>=1?1:0>=e?0:(1==v.pulseNormalize&&(v.pulseNormalize/=m(1)),m(e))}var w,g={frameRate:150,animationTime:800,stepSize:120,pulseAlgorithm:!0,pulseScale:8,pulseNormalize:1,accelerationDelta:20,accelerationMax:1,keyboardSupport:!0,arrowScroll:50,touchpadSupport:!0,fixedBackground:!0,excluded:""},v=g,b=!1,y=!1,k={x:0,y:0},x=!1,S=document.documentElement,D=[120,120,120],H={left:37,up:38,right:39,down:40,spacebar:32,pageup:33,pagedown:34,end:35,home:36},v=g,M=[],T=!1,C=+new Date,z={};setInterval(function(){z={}},1e4);var A,N=function(){var e=0;return function(t){return t.uniqueID||(t.uniqueID=e++)}}(),E=function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||function(e,t,o){window.setTimeout(e,o||1e3/60)}}(),K=/chrome/i.test(window.navigator.userAgent),L="onmousewheel"in document;L&&K&&(u("mousedown",a),u("mousewheel",n),u("load",t))}();
+
+!function(n){var t=n(window),e=t.height();t.resize(function(){e=t.height()}),n.fn.parallax=function(o,i,r){function u(){var r=t.scrollTop();a.each(function(){var t=n(this),u=t.offset().top,c=h(t);r>u+c||u>r+e||a.css("backgroundPosition",o+" "+Math.round((l-r)*i)+"px")})}var h,l,a=n(this);a.each(function(){l=a.offset().top}),h=r?function(n){return n.outerHeight(!0)}:function(n){return n.height()},(arguments.length<1||null===o)&&(o="50%"),(arguments.length<2||null===i)&&(i=.1),(arguments.length<3||null===r)&&(r=!0),t.bind("scroll",u).resize(u),u()}}(jQuery);
+
+$(function(){
+  
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || ($("#Services").parallax("50%", .4)), /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $(".parallax-section").css({
+        "background-attachment": "scroll"
+    });
+});
+   
+$(window).bind('resize', function(){
+  if($('.menu-icon').css('display') == "none") {
+    $('#navigation').show();
+  } else {
+    $('#navigation').hide();
+  }  
+});            
+                     
+$('.menu-icon').on('click', function(event){ 
+  event.preventDefault();
+  if($('#navigation').css('display') != 'block') {
+    $('#navigation').slideDown();
+  } else {
+    $('#navigation').slideUp();
+  }   
+});
+
+$('#mainnav li a').on('click', function(event){
+  
+  var target = $(this).attr('href');
+  var offsetTop = $(target).offset().top;
+     
+  $('html, body').animate({
+    scrollTop: offsetTop
+  }, 1000);
+  
+  if( $('.menu-icon').css('display') == 'block') { 
+    $('#navigation').slideUp();
+  }  
+  event.preventDefault();
+});     
+ </script>
+ <script >
+  const sliders = document.querySelectorAll(".slider");
+
+sliders.forEach((slider, cont_slider) => {
+	let slideIndex = 1;
+	let slides = slider.querySelectorAll(".slide");
+	let prev = document.createElement("span");
+	prev.classList.add("prev");
+	prev.innerHTML = "&#10094;";
+	slider.append(prev);
+	let next = document.createElement("span");
+	next.classList.add("next");
+	next.innerHTML = "&#10095;";
+	slider.append(next);
+
+	let dots = document.createElement("div");
+	dots.classList.add("dots");
+	slider.append(dots);
+
+	slides.forEach((slide, cont_slide) => {
+		let dot = document.createElement("span");
+		dot.classList.add("dot");
+		dots.append(dot);
+		dot.addEventListener("click", (e) => {
+			slideIndex = cont_slide + 1;
+			slides.forEach((slide, cont_slide) => {
+				slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
+			});
+		});
+
+		let numberText = document.createElement("div");
+		numberText.classList.add("numbertext");
+		numberText.innerText = cont_slide + 1 + "/" + slides.length;
+		slide.insertAdjacentElement("afterbegin", numberText);
+	});
+
+	next.addEventListener("click", (e) => {
+		slideIndex == slides.length ? (slideIndex = 1) : slideIndex++;
+		slides.forEach((slide, cont_slide) => {
+			slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
+		});
+	});
+
+	prev.addEventListener("click", (e) => {
+		slideIndex == 1 ? (slideIndex = slides.length) : slideIndex--;
+		slides.forEach((slide, cont_slide) => {
+			slide.style = "left: -" + (slideIndex - 1) * 100 + "%;";
+		});
+	});
+});
+
+ </script>	
+ <script>document.querySelector('.nast-stor').addEventListener('click', function() {
+  window.location.href = "assortment.html";});
+</script>
+<script>// Це додає гарну багатокрапку до опису:
+  document.querySelectorAll(".projcard-description").forEach(function(box) {
+    $clamp(box, {clamp: 6});
+  });</script>
+    </body>
+</html>

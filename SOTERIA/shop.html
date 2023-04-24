@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Магазини</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            /* Стилізація тіла */
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+              margin: 0;
+              background: #FBF7E9;
+            }
+        
+           @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+            h1{
+              color: rgb(85, 41, 5);
+              font-family : 'Oswald'; 
+              text-align: center;
+              margin: 0;
+              padding: 0;
+              font-size: 3em;
+            }
+
+            p{
+              color: rgb(85, 41, 5);
+              text-align: center;
+              font-family : 'Oswald'; 
+              margin: 0;
+              padding: 0;
+              font-size: 1.5em;
+            }
+
+            /* ліва бокова панель початок */
+            .row {  
+              display: -ms-flexbox; 
+              display: flex;
+              -ms-flex-wrap: wrap; 
+              flex-wrap: wrap;
+            }
+            
+            .side {
+              -ms-flex: 30%; /* IE10 */
+              flex: 30%;
+              background-color: #FBF7E9;
+              padding: 1.5em;
+            }
+            
+            .side h2 {
+              font-size: 1.6em;
+              text-align: center;
+              color: rgb(85, 41, 5);
+              font-family: 'Manrope', sans-serif; 
+              
+            }
+
+            .side h5{
+              font-size: 1.1em;
+              text-align: center;
+              color: #000000;
+              font-family: 'Manrope', sans-serif;
+            }            
+            .conttaainer {
+              position: relative;
+              max-width: 100%;
+              height: 100%;
+            }
+
+            .conttaainer img {vertical-align: middle;}
+
+            .conttaainer .content {
+              position: absolute;
+              bottom: 0;
+              background: rgba(43, 20, 0, 0.63); /* Black background with transparency */
+              color: #f1f1f1;
+              width: 100%;
+              padding: 2em;
+              text-align: left;
+              height: 100%;
+            } 
+
+            /* ліва бокова панель кінець */
+            /* основна частина сторінки початок */
+            .main {   
+              -ms-flex: 70%; /* IE10 */
+              flex: 70%;
+              background-color: #FBF7E9;
+              padding: 20px;
+            }
+
+            /* Дві колонки розташовувалися одна над одною, а не поруч одна з одною при зменшенні розміру вікна*/
+            @media screen and (max-width: 700px) {
+              .row {   
+                flex-direction: column;
+              }
+            }
+            
+            .photo { 
+              width: 35em; 
+              text-align: center; 
+              margin-right: 30px ; 
+              margin-left: 40px;
+              margin-top: 10px;
+              height: 8em;
+              background: #311c01; 
+              float: left; 
+              color: #FBF7E9;
+              font-family: 'Poiret One', cursive;
+            }
+            
+            h2{
+              text-align: center;
+              font-size: 2em;
+              font-family : 'Oswald';
+            }
+
+            iframe{
+              padding-left: 40px;
+              padding-right: 40px;
+              }
+  
+            header {
+              background-color: #FBF7E9;
+              text-align: center;
+              font-size: 20px;
+              color: white;
+              width: 100%;
+              min-height: 4.5em;
+            }
+/*меню початок*/
+            #mainNav {
+              background-color: #FBF7E9;
+              color: #FFE0E4;
+              line-height:2em;
+              padding-top: 1em;
+              position: fixed;
+              top: 0em; 
+              width:100%; 
+              font-size: 23px;
+              vertical-align: text-bottom;
+              z-index: 1000;
+            }
+
+            #mainNav img{
+              vertical-align: text-bottom;
+            }
+
+            #mainNav svg{
+              vertical-align: text-bottom;
+            }
+
+            a, a:link, a:visited, a:hover, a:active {
+              color:#FFE0E4; 
+              text-decoration:none;
+              display: inline-block;
+              padding-left: 0.5em;
+              padding-right: 0.5em;
+              font-size: 20px;
+              vertical-align: text-bottom;
+              color: #532D17;
+              font-family: 'Raleway', sans-serif;
+            }
+
+            a:hover {color: #7fd3f7;}
+/*меню кінець*/
+            /* підвал */
+            .footer {
+              padding: 20px;
+            }
+            
+            h6{
+              text-align: center;
+              color: #3d2301;
+            }
+            /* -посилання на соц мережі з лівого боку початок- */
+            #mySidenav a {
+            position: absolute;
+            left: -120px;
+            transition: 0.5s;
+            padding: 16.8px;
+            margin-top: 75em;
+            width: 9%;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            }
+
+            #mySidenav a:hover {
+              left: 0;
+            }
+
+            #tg {
+              top: 20px;
+              background-color: #46240F;
+            }
+
+            #fc {
+              top: 80px;
+              background-color: #4D2F1D;
+            }
+
+            #is {
+              top: 140px;
+              background-color: #543B2B;
+            }
+
+            #ln {
+              top: 200px;
+              background-color: #5C4639;
+            }
+            /* -посилання на соц мережі з лівого боку кінець- */
+
+            </style>
+    </head>
+    <body>
+      <header>
+        <nav id="mainNav"><img src="SVG.png" width="158" height="70" >
+          <a href="1exp.html"><b>ПРО ФІРМУ</b></a><a>|</a>
+          <a href="assortment.html"><b>ПРОДУКЦІЯ</b></a><a>|</a>
+          <a href="delivery.html"><b>ДОСТАВКА</b></a><a>|</a>
+          <a href="shop.html"><b>МАГАЗИНИ</b></a><a>|</a>
+          <a href="support.html"><b>СЛУЖБА ПІДТРИМКИИ</b></a><a>|</a>
+          <a href="vacancies.html"><b>ВАКАНСІЇ</b></a>
+        </nav>
+      </header>
+     <br><br>
+ 
+     <div id="mySidenav" class="sidenav">
+      <a href="#" id="tg">Telegram</a>
+      <a href="#" id="fc">Facebook</a>
+      <a href="#" id="is">Instagram</a>
+      <a href="#" id="ln">LinkedIn</a>
+    </div>
+    
+    
+     <h1>Магазини</h1><hr> <p>Кондитерська фірма Soteria: Солодка насолода в кожній крихті</p><br>
+          <div class="row">
+            <div class="side">
+              <div class="fakeimg" >  
+                <br><div class="conttaainer">
+                  <img src="https://images.unsplash.com/photo-1505236917042-e70d2d365d6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Notebook" style="width:100%;">
+                  <div class="content">
+                    <h3 style="font-size: 1.8em; text-align: left; font-family: 'Poiret One', cursive;">Перший фірмовий магазин було відкрито у 1965 році</h3>
+                    <h4 style="font-size: 1.4em; text-align: justify; font-family: 'Poiret One', cursive;">Перший магазин кондитерської фірми SOTERIA був відкритий у 1965 році у місті Львів, на вулиці Староєврейській. Це відкриття стало важливим кроком для SOTERIA і сприяло подальшому розвитку мережі магазинів у місті та за його межами.</h4>
+                  </div>
+                </div>
+                <br><div class="conttaainer">
+                  <img src="https://cdn.stocksnap.io/img-thumbs/960w/fresh-baked_AAASH8OTNW.jpg" alt="Notebook" style="width:100%;">
+                  <div class="content">
+                    <br><br><h3 style="font-size: 1.8em; text-align: left; font-family: 'Poiret One', cursive;">Сьогодні в Україі відкрито більше 18 фірмових магазинів кондитерської фірми SOTERIA. </h3>
+                  </div>
+                </div>
+                <br><div class="container">
+                  <img src="sale.png" alt="Notebook" style="width:100%;">
+                </div>
+                </div>
+
+            </div>
+            <div class="main">
+              <h2>Мазазини у Львові</h2>
+              <div class="photo"><h3>вул. Героїв УПА, 73</h3> <h4>м. Львів Понеділок - Неділя: 8:00 - 21:00 год.</h4></div>
+              <div class="photo"><h3>вул. Замарстинівська, 123</h3> <h4>м. Львів Понеділок - Неділя: 8:00 - 20:00 год.</h4></div>
+              <div class="photo"><h3>вул. Джорджа Вашингтона, 8</h3> <h4>м. Львів Понеділок - Неділя: 8:00 - 22:00 год.</h4></div>
+              <div class="photo"><h3>вул. Шпитальна, 11</h3> <h4>м. Львів Понеділок - Неділя: 7:00 - 23:00 год.</h4></div>
+              <div class="photo"><h3>вул. Назарука, 1</h3> <h4>м. Львів Понеділок - Неділя: 9:00 - 22:00 год.</h4></div>
+              <div class="photo"><h3>вул. Широка, 70а</h3> <h4>м. Львів Понеділок - Неділя: 8:00 - 21:00 год.</h4></div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d41166.777475343704!2d24.019517115917978!3d49.84389318783666!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1677922791556!5m2!1suk!2sua" width="98.3%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <br>
+              <h2>Мазазини в Києві</h2>
+              <div class="photo"><h3>вул. Борщагівська, 154</h3> <h4>м. Київ Понеділок - Неділя: 9:00 - 23:00 год.</h4></div>
+              <div class="photo"><h3>просп. Леся Курбаса, 2/13</h3> <h4>м. Київ Понеділок - Неділя: 8:00 - 20:00 год.</h4></div>
+              <div class="photo"><h3>вул. Бурмистенка, 11</h3> <h4>м. Київ Понеділок - Неділя: 10:00 - 21:00 год.</h4></div>
+              <div class="photo"><h3>вул. Сержа Лифаря, 3</h3> <h4>м. Київ Понеділок - Неділя: 7:00 - 22:00 год.</h4></div>
+              <div class="photo"><h3>вул. Академіка Курчатова, 8а</h3> <h4>м. Київ Понеділок - Неділя: 9:00 - 22:00 год.</h4></div>
+              <div class="photo"><h3>вул. Ревуцького, 15</h3> <h4>м. Київ Понеділок - Неділя: 8:00 - 21:00 год.</h4></div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d82064.43983336158!2d30.540896703827606!3d50.4607757229!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1677930481490!5m2!1suk!2sua" width="98.3%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <h2>Мазазини у Тернополі</h2>
+              <div class="photo"><h3>вул. Карпенка, 1</h3> <h4>м. Тернопіль Понеділок - Неділя: 7:00 - 21:00 год.</h4></div>
+              <div class="photo"><h3>просп. Степана Бандери, 47</h3> <h4>м. Тернопіль Понеділок - Неділя: 9:00 - 21:00 год.</h4></div>
+              <div class="photo"><h3>вул. Збаразька, 18</h3> <h4>м. Тернопіль Понеділок - Неділя: 9:00 - 22:00 год.</h4></div>
+              <div class="photo"><h3>просп. Злуки, 45</h3> <h4>м. Тернопіль Понеділок - Неділя: 8:00 - 22:00 год.</h4></div>
+              <div class="photo"><h3>б-р Симона Петлюри, 1а</h3> <h4>м. Тернопіль Понеділок - Неділя: 8:00 - 21:00 год.</h4></div>
+              <div class="photo"><h3>вул. Торговиця, 9в</h3> <h4>м. Тернопіль Понеділок - Неділя: 8:00 - 21:00 год.</h4></div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31624.52792332958!2d25.595044439675146!3d49.5592339290552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1678279032420!5m2!1suk!2sua" width="98.3%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          
+          <div class="footer">
+            <h6><hr>Copyright © 2023 SOTERIAStores<br>Робота Темної Оксани</h6>
+          </div>
+        
+        <script src="" async defer></script>
+ 
+    </body>
+</html>

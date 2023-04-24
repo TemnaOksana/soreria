@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Вакансії</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            /* Стилізація тіла */
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+              margin: 0;
+              background-color: #fbf7e9;
+            }
+        
+           @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+            hr{
+              border:none;
+              background:#532D17;
+              height:1px;
+              width: 60%;
+            }
+            h1{
+              color: #46240F;
+              font-family : 'Oswald'; 
+              text-align: center;
+              margin: 0;
+              padding: 0;
+              font-size: 3em;
+            }
+           
+            p{
+              color: rgb(85, 41, 5);
+              text-align: center;
+              font-family : 'Oswald'; 
+              margin: 0;
+              padding: 0;
+              font-size: 1.5em;
+            }
+
+            header {
+              background-color: #FBF7E9;
+              text-align: center;
+              font-size: 20px;
+              color: white;
+              width: 100%;
+              min-height: 4.5em;
+            }
+/*меню початок*/
+            #mainNav {
+              background-color: #FBF7E9;
+              color: #FFE0E4;
+              line-height:2em;
+              padding-top: 1em;
+              position: fixed;
+              top: 0em; 
+              width:100%; 
+              font-size: 23px;
+              vertical-align: text-bottom;
+              z-index: 1000;
+            }
+
+            #mainNav img{
+              vertical-align: text-bottom;
+            }
+
+            #mainNav svg{
+              vertical-align: text-bottom;
+            }
+
+            a, a:link, a:visited, a:hover, a:active {
+              color:#FFE0E4; 
+              text-decoration:none;
+              display: inline-block;
+              padding-left: 0.5em;
+              padding-right: 0.5em;
+              font-size: 20px;
+              vertical-align: text-bottom;
+              color: #532D17;
+              font-family: 'Raleway', sans-serif;
+            }
+
+            a:hover {color: #7fd3f7;}
+/*меню кінець*/
+            /* підвал */
+            .footer {
+              padding: 20px;
+            }
+            
+            h6{
+              text-align: center;
+              color: #3d2301;
+            }
+            /* -посилання на соц мережі з лівого боку початок- */
+            #mySidenav a {
+            position: absolute;
+            left: -120px;
+            transition: 0.5s;
+            padding: 16.8px;
+            margin-top: 14em;
+            width: 9%;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            }
+
+            #mySidenav a:hover {
+              left: 0;
+            }
+
+            #tg {
+              top: 20px;
+              background-color: #46240F;
+            }
+
+            #fc {
+              top: 80px;
+              background-color: #4D2F1D;
+            }
+
+            #is {
+              top: 140px;
+              background-color: #543B2B;
+            }
+
+            #ln {
+              top: 200px;
+              background-color: #5C4639;
+            }
+            /* -посилання на соц мережі з лівого боку кінець- */
+
+    /*вигляд таблички початок*/
+                
+            .accordion {
+              background: none;
+              color: #46240F;
+              cursor: pointer;
+              padding: 18px;
+              width: 60%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 2em;
+              transition: 0.8s;
+              margin-left: 20%;
+              border-top: 1px solid #46240F;
+              font-family : 'Oswald';            }
+
+            .active, .accordion:hover {
+              background-color: #cccccc00;
+            }
+
+            .accordion:after {
+              content: '\002B';
+              color: #46240F;
+              font-weight: bold;
+              float: right;
+              margin-left: 5px;
+            }
+
+            .active:after {
+              content: "\2212";
+            }
+
+            .panel {
+              padding: 0 18px;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+              margin-left: 20%;
+              width: 60%;
+            }
+                /*----------------------------------------------------------------------------------------*/
+            /* експеримент з табличкою*/
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+
+            th {
+              padding: 8px;
+              text-align: left;
+              border-bottom: 1px solid #ddd;
+              font-size: 1.5em;
+              font-family: 'Montserrat Alternates', sans-serif; 
+              color: #46240F;
+            }
+            td {
+              padding: 1.5%;
+              text-align: left;
+              border-bottom: 1px solid #ddd;
+              font-size: 1.2em;
+              color: #543B2B;
+            }
+
+            tr:hover {background-color: rgb(248, 238, 207);}
+
+            @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap');
+            .panel p{
+              font-family: 'Exo 2', sans-serif;
+              text-align: justify;
+              line-height: 1.5em;
+              font-size: 20px;
+            }
+    /*/////////////////////////////////////////////////////////////////////////////////////*/
+    
+    /* перший варіант початок*/
+            .innertube {
+              float: left;
+              width: 30%;
+              border-radius: 5px;
+              margin-left: 18.5%;
+              margin-top: 2%; 
+              padding: 2em;
+            }
+            .innertube2 {
+              float: left;
+              width: 30%;
+              border-radius: 5px;
+              margin-left: 3%;
+              margin-top: 2%; 
+              padding: 2em;
+            }
+            .innertube p{
+              font-family : 'Oswald';
+              font-size: 1.3em;
+              text-align: justify;
+              color: #46240F;
+              line-height: 1.6em;
+            }		
+            .innertube2 p{
+              font-family : 'Oswald';
+              font-size: 1.3em;
+              text-align: justify;
+              color: #46240F;
+              line-height: 1.6em;
+            }	
+            .lkj {
+              float: left;
+              margin: 7px 7px 7px 0px;
+		        }
+    /* перший варіант кінець */
+            
+            
+    </style>
+    </head>
+    <body>
+      <header>
+        <nav id="mainNav"><img src="SVG.png" width="158" height="70" >
+          <a href="1exp.html"><b>ПРО ФІРМУ</b></a><a>|</a>
+          <a href="assortment.html"><b>ПРОДУКЦІЯ</b></a><a>|</a>
+          <a href="delivery.html"><b>ДОСТАВКА</b></a><a>|</a>
+          <a href="shop.html"><b>МАГАЗИНИ</b></a><a>|</a>
+          <a href="support.html"><b>СЛУЖБА ПІДТРИМКИИ</b></a><a>|</a>
+          <a href="vacancies.html"><b>ВАКАНСІЇ</b></a>
+        </nav>
+      </header>
+     <br><br>
+ 
+     <div id="mySidenav" class="sidenav">
+      <a href="#" id="tg">Telegram</a>
+      <a href="#" id="fc">Facebook</a>
+      <a href="#" id="is">Instagram</a>
+      <a href="#" id="ln">LinkedIn</a>
+    </div>
+    
+     <h1>ВАКАНСІЇ</h1><hr><p>Кожен день - це можливість створювати щось неповторне разом</p> 
+     <article>
+      <div class="innertube"><p>Ми шукаємо талановитих, мотивованих та пристрасних людей, які хочуть працювати в нашій кондитерській компанії. 
+        Якщо ви любите створювати та ділитись смачними десертами з людьми, якщо ви хочете працювати в команді, яка завжди стрімиться до вдосконалення, тоді SOTERIA - це місце для вас!
+        </p>
+      </div>
+      <div class="innertube2"><p>Ми пропонуємо вам можливість працювати в дружньому колективі, де ваші ідеї будуть почуті та враховані. 
+        Ми гарантуємо вам цікаві проекти, виклики та можливість розвиватись в своїй професії. 
+        Крім того, ми стежимо за тим, щоб наші працівники мали адекватну оплату, можливість розвитку та багато інших переваг.</p>
+      </div>
+      <div style="float: left; width: 50%; margin-left: 25%; margin-bottom: 3%;"><p style="font-family : 'Oswald'; font-size: 1.5em; text-align: center; color: #46240F; line-height: 1.6em;">
+        Тож, якщо ви готові приєднатись до нашої команди, надсилайте свої резюме на e-mail soteria@gmail.com та долучайтесь до нашої мети - створювати найкращі кондитерські вироби для наших клієнтів!<br></p></div>
+  </article>
+  
+     <button class="accordion"><b>Кондитер у Львові</b></button>
+     <div class="panel">
+      <table>
+        <tr>
+          <th>Обов'язки:</th><th>Вимоги:</th>
+        </tr>
+        <tr>
+          <td> — Приготування кондитерських виробів відповідно до рецептури та стандартів якості;</td>
+          <td> — Досвід роботи кондитером принаймні 1 рік;</td>
+        </tr>
+        <tr>
+          <td> — Розробка нових рецептів та десертів;</td>
+          <td> — Знання рецептів та технологій приготування кондитерських виробів;</td>
+        </tr>
+        <tr>
+          <td> — Дотримання стандартів зберігання та безпеки продуктів;</td>
+          <td> — Вміння працювати з кондитерським обладнанням та інструментами;</td>
+        </tr>
+        <tr>
+          <td> — Підтримання чистоти та охайності на робочому місці;</td>
+          <td> — Висока увага до деталей та бажання досягати високих результатів;</td>
+        </tr>
+        <tr>
+          <td> — Працювати в команді з іншими працівниками кондитерської фірми.</td>
+          <td> — Вміння працювати в команді.</td>
+        </tr>
+      </table>
+     </div>
+     
+     <button class="accordion"><b>Менеджер з продажу  у Тернополі</b></button>
+     <div class="panel">
+      <table>
+        <tr>
+          <th>Обов'язки:</th>
+          <th>Вимоги:</th>
+        </tr>
+        <tr>
+          <td> — Взаємодія з потенційними та існуючими клієнтами, пропонування новинок, консультації щодо продуктів, укладання договорів та оформлення замовлень;</td>
+          <td> — Досвід роботи в продажах (вітається);</td>
+        </tr>
+        <tr>
+          <td> — Розвиток та підтримка системи продажів, розробка та виконання стратегії продажів;</td>
+          <td> — Високі комунікаційні навички та здатність вести переговори;</td>
+        </tr>
+        <tr>
+          <td> — Аналіз ринку та конкурентів, планування маркетингових акцій;</td>
+          <td> — Аналітичні навички та знання ринку;</td>
+        </tr>
+        <tr>
+          <td> — Організація роботи відділу продажів та забезпечення його ефективної роботи;</td>
+          <td> — Знання MS Office, CRM-систем;</td>
+        </tr>
+        <tr>
+          <td> — Співпраця з іншими відділами компанії, зокрема з відділом виробництва та логістики.</td>
+          <td> — Вміння працювати в команді.</td>
+        </tr>
+      </table>
+     </div>
+     
+     <button class="accordion"><b>Контролер якості в Києві</b></button>
+     <div class="panel">
+      <table>
+        <tr>
+          <th>Обов'язки:</th>
+          <th>Вимоги:</th>
+        </tr>
+        <tr>
+          <td> — Вимірювання, аналіз та оцінка характеристик продуктів компанії;</td>
+          <td> — Досвід роботи в області контролю якості продукції;</td>
+        </tr>
+        <tr>
+          <td> — Виконання перевірок продукції на дотримання вимог до якості та відповідність стандартам;</td>
+          <td> — Знання стандартів та процедур контролю якості;</td>
+        </tr>
+        <tr>
+          <td> — Визначення проблем виробництва та пропонування вирішень для покращення процесів виробництва;</td>
+          <td> — Вміння використовувати вимірювальні та інші спеціалізовані інструменти для оцінки характеристик продуктів;</td>
+        </tr>
+        <tr>
+          <td> — Співпраця з іншими відділами компанії для забезпечення виробництва продуктів відповідно до вимог.</td>
+          <td> — Досвід роботи зі статистичними методами контролю якості;</td>
+        </tr>
+      </table>
+     </div>
+     
+    
+
+
+        
+        <script>
+        
+        var acc = document.getElementsByClassName("accordion");
+          var i;
+          
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              } 
+            });
+          }
+
+          </script>
+ 
+    </body>
+</html>
